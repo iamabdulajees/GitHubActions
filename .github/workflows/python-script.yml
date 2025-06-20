@@ -1,0 +1,19 @@
+name: Run Python File
+on: workflow_dispatch
+
+jobs: 
+  Run_Python_Script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone repo
+      uses: actions/checkout@v3
+
+    - name: Installing Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Run a python script
+      run: python hello-world.py
+      
